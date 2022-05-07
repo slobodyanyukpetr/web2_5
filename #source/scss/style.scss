@@ -1,0 +1,165 @@
+@import "nullstyle.scss";
+
+
+body {
+	background-color: #a2a2a2;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+input,
+button,
+textarea {
+	border: 2px solid rgba(0, 0, 0, 0.6);
+	background-image: none;
+	background-color: #dadad3;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 5px;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+textarea {
+	min-width: 100%;
+	min-height: 50px;
+	resize: vertical;
+}
+
+button {
+	cursor: pointer;
+	font-weight: 500;
+}
+
+select {
+	border: 2px solid rgba(0, 0, 0, 0.6);
+	background-color: #fff;
+	min-width: 200px;
+}
+
+.form {
+	box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	max-width: 300px;
+	background-color: #fff;
+	border: 1px solid black;
+
+	&__body {
+		font-size: 14px;
+	}
+
+	&__header {
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding: 10px;
+		border-bottom: 1px solid black;
+
+		.none {
+			display: none;
+		}
+
+		.form__container {
+			display: block;
+			border: 2px solid rgba(0, 0, 0, 0.6);
+			text-align: start;
+			width: 100%;
+
+			&_good {
+				text-align: center;
+				background-color: #ADD3A6;
+				color: #306D27;
+			}
+		}
+	}
+
+	&__footer {
+		border-top: 1px solid black;
+		padding: 10px 0;
+		text-align: center;
+	}
+
+	&__container {
+		&_err {
+			padding: 5px;
+			display: flex;
+			flex-direction: column;
+			word-wrap: break-word;
+			color: #5A161B;
+
+			width: 200px;
+			background-color: #C58D91;
+			border: 2px solid rgba(0, 0, 0, 0.6);
+			border-top: none;
+		}
+
+		&_good {
+			padding: 5px;
+			display: flex;
+			flex-direction: column;
+			word-wrap: break-word;
+			color: #5A161B;
+
+			width: 200px;
+			background-color: #C58D91;
+			border: 2px solid rgba(0, 0, 0, 0.6);
+			border-top: none;
+		}
+	}
+
+	&__item {
+		padding: 10px 50px 0 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		text-align: center;
+
+		&_sp {
+			.form__label {
+				text-align: center;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+		&_radio {
+			justify-content: space-evenly;
+
+			.form__container_err {
+				border: 2px solid rgba(0, 0, 0, 0.6);
+			}
+		}
+
+		&_numlimbs {
+			flex-direction: column;
+
+			.form__container {
+				display: flex;
+				justify-content: space-evenly;
+
+				&_err {
+					border: 2px solid rgba(0, 0, 0, 0.6);
+				}
+			}
+		}
+
+		&_submit {
+			padding-bottom: 10px;
+			justify-content: center;
+		}
+	}
+
+	&__input {
+		&_text {
+			min-width: 200px;
+		}
+	}
+}
